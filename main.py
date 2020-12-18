@@ -6,6 +6,8 @@ url = "https://www.terra.com.br/esportes/futebol/brasileiro-serie-a/tabela/"
 driver = webdriver.Chrome(executable_path=r'files\\chromedriver.exe')
 driver.get(url)
 time.sleep(6)
+driver.execute_script('window.scrollBy(0, 500)')
+
 
 tabela = driver.find_element_by_xpath("//div//*[@id='mod-603-standings-round-robin']//div[1]//div[1]//table//tbody")
 
